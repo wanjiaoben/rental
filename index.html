@@ -201,6 +201,16 @@ section{padding:5.5rem 0;}
 .float-ch-name{font-size:.75rem;font-weight:700;line-height:1.2;}
 .float-ch-val{font-size:.64rem;color:var(--muted);margin-top:.1rem;}
 
+/* FLOAT SECTION NAV */
+.float-nav{position:fixed;bottom:5.2rem;right:1.75rem;z-index:900;display:flex;flex-direction:column;align-items:center;gap:.3rem;}
+.float-nav-btn{display:flex;align-items:center;justify-content:center;background:rgba(6,13,24,.88);border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:.5rem .75rem;color:rgba(255,255,255,.85);font-size:.76rem;font-weight:700;cursor:pointer;text-decoration:none;white-space:nowrap;box-shadow:0 2px 10px rgba(0,0,0,.35);transition:all .2s;font-family:var(--font-b);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);width:58px;letter-spacing:0;}
+.float-nav-btn:hover{border-color:var(--teal);color:var(--white);background:rgba(0,180,200,.18);transform:scale(1.06);}
+.float-nav::after{content:'✦';font-size:.75rem;opacity:.45;margin-top:.15rem;display:block;color:var(--gold);}
+@media(max-width:480px){
+  .float-nav{right:1.25rem;bottom:4.8rem;}
+  .float-nav-btn{width:50px;font-size:.62rem;padding:.45rem .5rem;}
+}
+
 /* FOOTER */
 footer{background:#030810;border-top:1px solid var(--glass-b);padding:2.5rem 0 1.75rem;}
 .footer-inner{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:2.5rem;margin-bottom:2rem;}
@@ -211,6 +221,7 @@ footer{background:#030810;border-top:1px solid var(--glass-b);padding:2.5rem 0 1
 .footer-links a{font-size:.82rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s;}
 .footer-links a:hover{color:var(--white);}
 .footer-col h4{font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.85rem;}
+.footer-note{font-size:.78rem;color:rgba(255,255,255,.48);line-height:1.7;margin:-.35rem 0 1rem;max-width:300px;}
 .footer-bottom{border-top:1px solid var(--glass-b);padding-top:1.25rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;}
 .footer-copy{font-size:.72rem;color:var(--muted);}
 .footer-family{display:flex;gap:1.25rem;flex-wrap:wrap;}
@@ -252,7 +263,6 @@ footer{background:#030810;border-top:1px solid var(--glass-b);padding:2.5rem 0 1
   <div class="nav-links">
     <a href="#rentals" data-en>Rentals</a><a href="#rentals" data-zh>租赁服务</a><a href="#rentals" data-zhtw>租賃服務</a><a href="#rentals" data-ja>レンタル</a><a href="#rentals" data-ko>렌탈</a><a href="#rentals" data-th>เช่า</a>
     <a href="#experiences" data-en>Experiences</a><a href="#experiences" data-zh>体验项目</a><a href="#experiences" data-zhtw>體驗項目</a><a href="#experiences" data-ja>アクティビティ</a><a href="#experiences" data-ko>체험</a><a href="#experiences" data-th>ประสบการณ์</a>
-    <a href="#how" data-en>How to Book</a><a href="#how" data-zh>预约方法</a><a href="#how" data-zhtw>預約方法</a><a href="#how" data-ja>予約方法</a><a href="#how" data-ko>예약 방법</a><a href="#how" data-th>วิธีจอง</a>
     <a href="#faq">FAQ</a>
   </div>
   <div class="nav-right">
@@ -284,20 +294,20 @@ footer{background:#030810;border-top:1px solid var(--glass-b);padding:2.5rem 0 1
     <div class="hero-eyebrow" data-th>โอกินาวา — เช่าและประสบการณ์</div>
 
     <h1 class="hero-title">
-      <span data-en>Rent a Car.<br><em>Own the Island.</em></span>
-      <span data-zh>租一辆车，<br><em>拥有整座岛。</em></span>
-      <span data-zhtw>租一輛車，<br><em>擁有整座島。</em></span>
-      <span data-ja>車を借りて、<br><em>島を自由に。</em></span>
-      <span data-ko>차를 빌려서,<br><em>섬을 자유롭게.</em></span>
-      <span data-th>เช่ารถ<br><em>แล้วเป็นเจ้าของเกาะ</em></span>
+      <span data-en>The gear is rented.<br><em>The journey is yours.</em></span>
+      <span data-zh>装备都是租的，<br><em>但是美好的旅行体验是自己的。</em></span>
+      <span data-zhtw>裝備都是租的，<br><em>但是美好的旅行體驗是自己的。</em></span>
+      <span data-ja>レンタルなのは装備だけ。<br><em>旅の体験はあなた自身のもの。</em></span>
+      <span data-ko>장비는 빌린 것이지만,<br><em>멋진 여행 경험은 당신의 것입니다.</em></span>
+      <span data-th>อุปกรณ์อาจเป็นของเช่า<br><em>แต่ประสบการณ์ดีๆ เป็นของคุณ</em></span>
     </h1>
 
-    <p class="hero-sub" data-en>Car + snorkel kit = the ultimate Okinawa freedom combo. Pull over at any wild beach, gear up, dive in. No tour group. No schedule. Just you and the ocean.</p>
-    <p class="hero-sub" data-zh>租车 + 浮潜套装 = 冲绳自由行终极方案。随时停车，随时下海，没有团队，没有行程表，只有你和大海。</p>
-    <p class="hero-sub" data-zhtw>租車 + 浮潛套裝 = 沖繩自由行終極方案。隨時停車，隨時下海，沒有團隊，沒有行程表，只有你和大海。</p>
-    <p class="hero-sub" data-ja>車＋シュノーケルセット＝沖縄自由旅行の最強コンボ。野外ビーチに寄り道して、海に飛び込もう。ツアーなし、スケジュールなし、あなたと海だけ。</p>
-    <p class="hero-sub" data-ko>렌터카 + 스노클 세트 = 오키나와 자유여행의 최강 조합. 아무 해변에서나 멈추고, 장비 입고, 바다로. 단체 투어 없이, 나만의 일정으로.</p>
-    <p class="hero-sub" data-th>รถเช่า + ชุดดำน้ำตื้น = สูตรเที่ยวโอกินาวาแบบอิสระสุดๆ จอดได้ทุกหาด พร้อมลงน้ำทันที ไม่ต้องตามทัวร์ ไม่ต้องมีตารางเวลา</p>
+    <p class="hero-sub" data-en>Car rental + all kinds of kits = the ultimate Okinawa freedom combo. Stop anytime, swim anytime, tee off anytime, shop anytime. No tour group rushing the schedule, no business-trip stress — just you and the ocean.</p>
+    <p class="hero-sub" data-zh>租车 + 各种套装 = 冲绳自由行终极方案，随时停车，随时下海，随时打球，随时买买买，没有团队赶行程，没有出差的紧张，只有你和大海。</p>
+    <p class="hero-sub" data-zhtw>租車 + 各種套裝 = 沖繩自由行終極方案，隨時停車，隨時下海，隨時打球，隨時買買買，沒有團隊趕行程，沒有出差的緊張，只有你和大海。</p>
+    <p class="hero-sub" data-ja>レンタカー + いろいろなセット = 沖縄自由旅の最強プラン。好きな時に停まり、好きな時に海へ入り、好きな時にゴルフをして、好きな時に買い物へ。ツアーに急かされず、出張の緊張もない。あるのは、あなたと海だけ。</p>
+    <p class="hero-sub" data-ko>렌터카 + 다양한 세트 = 오키나와 자유여행의 완벽한 조합. 언제든 멈추고, 언제든 바다에 들어가고, 언제든 골프를 치고, 언제든 쇼핑하세요. 단체 일정에 쫓기지 않고, 출장의 긴장도 없이, 오직 당신과 바다만 있습니다.</p>
+    <p class="hero-sub" data-th>รถเช่า + ชุดอุปกรณ์หลากหลาย = สูตรเที่ยวโอกินาวาแบบอิสระ จะจอดเมื่อไรก็ได้ ลงทะเลเมื่อไรก็ได้ ตีกอล์ฟเมื่อไรก็ได้ ช้อปเมื่อไรก็ได้ ไม่มีทัวร์เร่งตาราง ไม่มีความเครียดแบบทริปงาน มีแค่คุณกับทะเล</p>
 
     <div class="hero-btns">
       <a href="#rentals" class="btn-gold">
@@ -323,6 +333,7 @@ footer{background:#030810;border-top:1px solid var(--glass-b);padding:2.5rem 0 1
       <span class="hero-tag" data-en>🤿 Snorkel Kit</span><span class="hero-tag" data-zh>🤿 浮潜套装</span><span class="hero-tag" data-zhtw>🤿 浮潛套裝</span><span class="hero-tag" data-ja>🤿 シュノーケルセット</span><span class="hero-tag" data-ko>🤿 스노클 세트</span><span class="hero-tag" data-th>🤿 ชุดดำน้ำตื้น</span>
       <span class="hero-tag" data-en>🔥 BBQ Beach</span><span class="hero-tag" data-zh>🔥 沙滩BBQ</span><span class="hero-tag" data-zhtw>🔥 沙灘BBQ</span><span class="hero-tag" data-ja>🔥 BBQビーチ</span><span class="hero-tag" data-ko>🔥 비치 BBQ</span><span class="hero-tag" data-th>🔥 BBQ ชายหาด</span>
       <span class="hero-tag" data-en>🎣 Fishing Gear</span><span class="hero-tag" data-zh>🎣 钓鱼装备</span><span class="hero-tag" data-zhtw>🎣 釣魚裝備</span><span class="hero-tag" data-ja>🎣 釣り道具</span><span class="hero-tag" data-ko>🎣 낚시 장비</span><span class="hero-tag" data-th>🎣 อุปกรณ์ตกปลา</span>
+      <span class="hero-tag" data-en>⛳ Golf Experience Kit</span><span class="hero-tag" data-zh>⛳ 高尔夫体验装</span><span class="hero-tag" data-zhtw>⛳ 高爾夫體驗套裝</span><span class="hero-tag" data-ja>⛳ ゴルフ体験セット</span><span class="hero-tag" data-ko>⛳ 골프 체험 세트</span><span class="hero-tag" data-th>⛳ ชุดประสบการณ์กอล์ฟ</span>
     </div>
   </div>
 </section>
@@ -340,14 +351,14 @@ footer{background:#030810;border-top:1px solid var(--glass-b);padding:2.5rem 0 1
 
     <h2 class="s-title reveal">
       <span data-en>Car Rental + Snorkel Kit</span>
-      <span data-zh>租车 + 浮潜套装</span>
+      <span data-zh>租车 + 浮潜套装+救生衣</span>
       <span data-zhtw>租車 + 浮潛套裝</span>
       <span data-ja>レンタカー＋シュノーケルセット</span>
       <span data-ko>렌터카 + 스노클 세트</span>
       <span data-th>เช่ารถ + ชุดดำน้ำตื้น</span>
     </h2>
     <p class="s-desc reveal" data-en>The best way to explore Okinawa. Add a snorkel kit to any car rental and we'll throw in our secret beach guide — wild spots most tourists never find.</p>
-    <p class="s-desc reveal" data-zh>探索冲绳的最佳方式。租车附加浮潜套装，附送我们的秘境沙滩手册——大多数游客永远找不到的野地。</p>
+    <p class="s-desc reveal" data-zh>探索冲绳的最佳方式。租车附加浮潜套装，附送我们的秘境沙滩手册和安全指南——不住个十年很难遇见的无人沙滩（请遵守安全指南或雇佣专业人士同行）。</p>
     <p class="s-desc reveal" data-zhtw>探索沖繩的最佳方式。租車附加浮潛套裝，附送我們的秘境沙灘手冊——大多數遊客永遠找不到的野地。</p>
     <p class="s-desc reveal" data-ja>沖縄を探索する最高の方法。レンタカーにシュノーケルセットを追加すると、ほとんどの観光客が知らない秘密のビーチガイドをプレゼント。</p>
     <p class="s-desc reveal" data-ko>오키나와를 탐험하는 최고의 방법. 렌터카에 스노클 세트를 추가하면 대부분의 관광객이 모르는 비밀 해변 가이드를 드립니다.</p>
@@ -489,105 +500,22 @@ footer{background:#030810;border-top:1px solid var(--glass-b);padding:2.5rem 0 1
     <div class="s-label reveal" data-th>บริการทั้งหมด</div>
 
     <h2 class="s-title reveal">
-      <span data-en>While You're Here — Why Not?</span>
-      <span data-zh>来都来了——不如试试</span>
-      <span data-zhtw>來都來了——不如試試</span>
-      <span data-ja>せっかくだから、やってみよう</span>
-      <span data-ko>왔으니까 — 해보지 않을래요?</span>
-      <span data-th>มาแล้วก็ลองดูสักตั้ง</span>
+      <span data-en>Gear Up, Then Go Anywhere</span>
+      <span data-zh>装备齐了，想去哪就去哪</span>
+      <span data-zhtw>裝備齊了，想去哪就去哪</span>
+      <span data-ja>装備をそろえて、どこへでも</span>
+      <span data-ko>장비를 챙기고, 어디든 자유롭게</span>
+      <span data-th>มีอุปกรณ์พร้อม ก็ไปได้ทุกที่</span>
     </h2>
-    <p class="s-desc reveal" data-en>Never expected to drive a convertible or try deep-sea fishing? We make it easy. One message — we sort it.</p>
-    <p class="s-desc reveal" data-zh>没想过开敞篷车？没想过海钓？没关系，一条消息，我们帮你搞定。</p>
-    <p class="s-desc reveal" data-zhtw>沒想過開敞篷車？沒想過海釣？沒關係，一條消息，我們幫你搞定。</p>
-    <p class="s-desc reveal" data-ja>オープンカーを運転するとは思っていなかった？深海釣りは？大丈夫。メッセージ一つで手配します。</p>
-    <p class="s-desc reveal" data-ko>컨버터블을 몰게 될 줄 몰랐죠? 바다낚시도요? 메시지 하나면 다 준비해 드립니다.</p>
-    <p class="s-desc reveal" data-th>ไม่คิดว่าจะได้ขับรถเปิดประทุน? หรือตกปลาทะเลลึก? ส่งข้อความมา เราจัดการให้ทุกอย่าง</p>
+    <p class="s-desc reveal" data-en>From family cars and convertibles to snorkel sets, fishing gear, cameras, BBQ kits and golf support — start with the right rental gear, then shape the day your way.</p>
+    <p class="s-desc reveal" data-zh>从家庭车、敞篷车，到浮潜套装、钓鱼装备、相机、BBQ和高尔夫体验装，先把装备租好，再决定今天怎么自由玩。</p>
+    <p class="s-desc reveal" data-zhtw>從家庭車、敞篷車，到浮潛套裝、釣魚裝備、相機、BBQ和高爾夫體驗套裝，先把裝備租好，再決定今天怎麼自由玩。</p>
+    <p class="s-desc reveal" data-ja>ファミリーカーやオープンカーから、シュノーケルセット、釣り道具、カメラ、BBQ、ゴルフ体験セットまで。必要なレンタル装備をそろえて、その日の遊び方を自由に決められます。</p>
+    <p class="s-desc reveal" data-ko>패밀리카와 오픈카부터 스노클 세트, 낚시 장비, 카메라, BBQ, 골프 체험 세트까지. 필요한 렌탈 장비를 먼저 준비하고, 하루를 원하는 방식으로 즐기세요.</p>
+    <p class="s-desc reveal" data-th>ตั้งแต่รถครอบครัว รถเปิดประทุน ชุดดำน้ำตื้น อุปกรณ์ตกปลา กล้อง ชุด BBQ ไปจนถึงชุดประสบการณ์กอล์ฟ เช่าอุปกรณ์ให้พร้อม แล้วออกแบบวันของคุณได้อย่างอิสระ</p>
 
     <div class="services-grid" id="services-grid">
       <!-- JS populated -->
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══ HOW IT WORKS ════════════════════════════════════════ -->
-<section class="how-section" id="how">
-  <div class="container">
-    <div class="s-label reveal" data-en>How to Book</div>
-    <div class="s-label reveal" data-zh>预约流程</div>
-    <div class="s-label reveal" data-zhtw>預約流程</div>
-    <div class="s-label reveal" data-ja>予約の流れ</div>
-    <div class="s-label reveal" data-ko>예약 방법</div>
-    <div class="s-label reveal" data-th>วิธีจอง</div>
-    <h2 class="s-title reveal">
-      <span data-en>Simple as That</span>
-      <span data-zh>就这么简单</span>
-      <span data-zhtw>就這麼簡單</span>
-      <span data-ja>とっても簡単</span>
-      <span data-ko>이렇게 간단합니다</span>
-      <span data-th>ง่ายมากๆ</span>
-    </h2>
-    <div class="steps">
-      <div class="step reveal">
-        <div class="step-n">1</div>
-        <div class="step-title" data-en>Message Us</div>
-        <div class="step-title" data-zh>联系我们</div>
-        <div class="step-title" data-zhtw>聯繫我們</div>
-        <div class="step-title" data-ja>まずご連絡</div>
-        <div class="step-title" data-ko>메시지 보내기</div>
-        <div class="step-title" data-th>ส่งข้อความมา</div>
-        <div class="step-desc" data-en>WeChat, WhatsApp or email. Tell us what you want and your dates.</div>
-        <div class="step-desc" data-zh>微信、WhatsApp 或邮件，说明需求和日期。</div>
-        <div class="step-desc" data-zhtw>微信、WhatsApp 或郵件，說明需求和日期。</div>
-        <div class="step-desc" data-ja>WeChat・WhatsApp・メールで、ご希望と日程をお知らせください。</div>
-        <div class="step-desc" data-ko>WeChat, WhatsApp 또는 이메일로 원하는 내용과 날짜를 알려주세요.</div>
-        <div class="step-desc" data-th>WeChat, WhatsApp หรืออีเมล บอกสิ่งที่ต้องการและวันที่</div>
-      </div>
-      <div class="step reveal reveal-d1">
-        <div class="step-n">2</div>
-        <div class="step-title" data-en>Get a Quote</div>
-        <div class="step-title" data-zh>收到报价</div>
-        <div class="step-title" data-zhtw>收到報價</div>
-        <div class="step-title" data-ja>見積もり受け取り</div>
-        <div class="step-title" data-ko>견적 받기</div>
-        <div class="step-title" data-th>รับใบเสนอราคา</div>
-        <div class="step-desc" data-en>We reply within a few hours with options and pricing.</div>
-        <div class="step-desc" data-zh>我们几小时内回复，附上方案和价格。</div>
-        <div class="step-desc" data-zhtw>我們幾小時內回覆，附上方案和價格。</div>
-        <div class="step-desc" data-ja>数時間以内にオプションと料金をご返答します。</div>
-        <div class="step-desc" data-ko>몇 시간 안에 옵션과 가격을 답변드립니다.</div>
-        <div class="step-desc" data-th>เราตอบกลับภายในไม่กี่ชั่วโมงพร้อมตัวเลือกและราคา</div>
-      </div>
-      <div class="step reveal reveal-d2">
-        <div class="step-n">3</div>
-        <div class="step-title" data-en>Confirm &amp; Pay</div>
-        <div class="step-title" data-zh>确认并付款</div>
-        <div class="step-title" data-zhtw>確認並付款</div>
-        <div class="step-title" data-ja>確認・お支払い</div>
-        <div class="step-title" data-ko>확인 및 결제</div>
-        <div class="step-title" data-th>ยืนยันและชำระเงิน</div>
-        <div class="step-desc" data-en>Simple deposit to secure your booking. Balance on the day.</div>
-        <div class="step-desc" data-zh>预付定金确认预约，余款当天结清。</div>
-        <div class="step-desc" data-zhtw>預付訂金確認預約，餘款當天結清。</div>
-        <div class="step-desc" data-ja>予約確保のためのデポジット。残金は当日払い。</div>
-        <div class="step-desc" data-ko>예약 확보를 위한 보증금. 잔금은 당일 지불.</div>
-        <div class="step-desc" data-th>วางเงินมัดจำเพื่อยืนยันการจอง ส่วนที่เหลือชำระวันนั้น</div>
-      </div>
-      <div class="step reveal reveal-d3">
-        <div class="step-n">4</div>
-        <div class="step-title" data-en>Enjoy</div>
-        <div class="step-title" data-zh>尽情享受</div>
-        <div class="step-title" data-zhtw>盡情享受</div>
-        <div class="step-title" data-ja>楽しもう！</div>
-        <div class="step-title" data-ko>즐기세요</div>
-        <div class="step-title" data-th>เพลิดเพลินได้เลย</div>
-        <div class="step-desc" data-en>We handle pickup, delivery, coordination. You just show up.</div>
-        <div class="step-desc" data-zh>我们负责接送、配送、协调，你只需出现。</div>
-        <div class="step-desc" data-zhtw>我們負責接送、配送、協調，你只需出現。</div>
-        <div class="step-desc" data-ja>送迎・配達・手配はすべてお任せ。あなたは来るだけ。</div>
-        <div class="step-desc" data-ko>픽업, 배달, 조정은 저희가 다 합니다. 오시기만 하면 됩니다.</div>
-        <div class="step-desc" data-th>เราดูแลรับ-ส่ง จัดส่ง และประสานงานทั้งหมด คุณแค่มาปรากฏตัว</div>
-      </div>
     </div>
   </div>
 </section>
@@ -659,6 +587,12 @@ footer{background:#030810;border-top:1px solid var(--glass-b);padding:2.5rem 0 1
       <div>
         <div class="footer-col">
           <h4 data-en>Network</h4><h4 data-zh>我们的网络</h4><h4 data-zhtw>我們的網絡</h4><h4 data-ja>ネットワーク</h4><h4 data-ko>네트워크</h4><h4 data-th>เครือข่าย</h4>
+          <p class="footer-note" data-en>rental.nice.okinawa is the rental hub for Okinawa travel: cars, beach gear, snorkel sets, fishing equipment, BBQ kits, cameras and golf add-ons, with pickup and delivery support.</p>
+          <p class="footer-note" data-zh>rental.nice.okinawa 是冲绳旅行租赁入口：租车、沙滩装备、浮潜套装、钓鱼装备、BBQ、相机和高尔夫体验装，也可协助取还、配送与本地对接。</p>
+          <p class="footer-note" data-zhtw>rental.nice.okinawa 是沖繩旅行租賃入口：租車、沙灘裝備、浮潛套裝、釣魚裝備、BBQ、相機和高爾夫體驗套裝，也可協助取還、配送與在地對接。</p>
+          <p class="footer-note" data-ja>rental.nice.okinawa は沖縄旅行のレンタル窓口です。車、ビーチ用品、シュノーケルセット、釣り道具、BBQ、カメラ、ゴルフ体験セットまで、受け渡しや配送もサポートします。</p>
+          <p class="footer-note" data-ko>rental.nice.okinawa는 오키나와 여행 렌탈 허브입니다. 차량, 해변 장비, 스노클 세트, 낚시 장비, BBQ, 카메라, 골프 체험 세트와 픽업·배송을 지원합니다.</p>
+          <p class="footer-note" data-th>rental.nice.okinawa คือศูนย์เช่าอุปกรณ์สำหรับทริปโอกินาวา: รถ อุปกรณ์ชายหาด ชุดดำน้ำตื้น อุปกรณ์ตกปลา BBQ กล้อง และชุดกอล์ฟ พร้อมช่วยรับคืน จัดส่ง และประสานงานในพื้นที่</p>
           <ul class="footer-links">
             <li><a href="https://fishing.nice.okinawa" target="_blank">fishing.nice.okinawa</a></li>
             <li><a href="https://snorkel.nice.okinawa" target="_blank">snorkel.nice.okinawa</a></li>
@@ -680,10 +614,39 @@ footer{background:#030810;border-top:1px solid var(--glass-b);padding:2.5rem 0 1
 </footer>
 
 
+<!-- ═══ FLOAT NAV ══════════════════════════════════════════ -->
+<div class="float-nav" id="float-nav">
+  <a class="float-nav-btn" href="#rentals" onclick="smoothTo(event,'rentals')">
+    <span data-en>Rent</span>
+    <span data-zh>租赁</span>
+    <span data-zhtw>租賃</span>
+    <span data-ja>レンタル</span>
+    <span data-ko>렌탈</span>
+    <span data-th>เช่า</span>
+  </a>
+  <a class="float-nav-btn" href="#experiences" onclick="smoothTo(event,'experiences')">
+    <span data-en>Gear</span>
+    <span data-zh>装备</span>
+    <span data-zhtw>裝備</span>
+    <span data-ja>装備</span>
+    <span data-ko>장비</span>
+    <span data-th>อุปกรณ์</span>
+  </a>
+  <a class="float-nav-btn" href="#also" onclick="smoothTo(event,'also')">
+    <span data-en>More</span>
+    <span data-zh>网络</span>
+    <span data-zhtw>網絡</span>
+    <span data-ja>他にも</span>
+    <span data-ko>더보기</span>
+    <span data-th>เพิ่ม</span>
+  </a>
+  <a class="float-nav-btn" href="#faq" onclick="smoothTo(event,'faq')">FAQ</a>
+</div>
+
 <!-- ═══ FLOAT CONTACT ══════════════════════════════════════ -->
 <div class="float-contact" id="float-contact">
   <div class="float-channels" id="float-channels">
-    <a href="#" class="float-channel" onclick="copyWechat(event)">
+    <a href="weixin://dl/chat?OkinawaOnline" class="float-channel" onclick="copyWechat(event)">
       <div class="float-ch-icon wechat">💬</div>
       <div><div class="float-ch-name">WeChat 微信</div><div class="float-ch-val">OkinawaOnline</div></div>
     </a>
@@ -743,16 +706,16 @@ const SERVICES = [
     icon:'🎣',
     name:{en:'Fishing Gear',zh:'钓鱼装备',zhtw:'釣魚裝備',ja:'釣り道具レンタル',ko:'낚시 장비',th:'อุปกรณ์ตกปลา'},
     desc:{
-      en:'Full tackle rental — rods, reels, cooler box. Coordinated with our captain partners. Add to a fishing charter or rent standalone for shore fishing.',
-      zh:'全套钓具租赁——竿、卷线器、保温箱，与我们的合作船长协调。可附加钓鱼包船或单独租赁用于岸钓。',
-      zhtw:'全套釣具租賃——竿、捲線器、保溫箱，與我們的合作船長協調。可附加釣魚包船或單獨租賃用於岸釣。',
-      ja:'ロッド・リール・クーラーボックスなどタックル一式レンタル。チャーターへの追加または陸釣り単体での利用も可。',
-      ko:'낚싯대, 릴, 쿨러박스 등 풀 태클 렌탈. 낚시 차터 추가 또는 단독 해안 낚시용으로 이용 가능.',
-      th:'เช่าอุปกรณ์ตกปลาครบชุด — คันเบ็ด รอก กล่องเก็บความเย็น ประสานงานกับกัปตันพาร์ทเนอร์ เพิ่มกับแพ็คเกจตกปลาหรือเช่าแยกสำหรับตกปลาชายฝั่ง'
+      en:'Full tackle rental — rods, reels, cooler box and basic accessories. Easy to add to a car rental for relaxed shore fishing along the coast.',
+      zh:'全套钓具租赁——鱼竿、卷线器、保温箱和基础配件。可以搭配租车，在海边找个舒服的位置轻松岸钓。',
+      zhtw:'全套釣具租賃——魚竿、捲線器、保溫箱和基礎配件。可以搭配租車，在海邊找個舒服的位置輕鬆岸釣。',
+      ja:'ロッド、リール、クーラーボックス、基本アクセサリーのレンタル。レンタカーと組み合わせて、海岸沿いで気軽に陸釣りを楽しめます。',
+      ko:'낚싯대, 릴, 쿨러박스와 기본 액세서리 렌탈. 렌터카와 함께 이용하면 해안에서 여유롭게 낚시를 즐길 수 있습니다.',
+      th:'เช่าอุปกรณ์ตกปลาครบชุด — คันเบ็ด รอก กล่องเก็บความเย็น และอุปกรณ์พื้นฐาน เหมาะกับการเช่าพร้อมรถแล้วไปตกปลาริมฝั่งแบบสบายๆ'
     },
     price:{en:'From ¥— / day',zh:'¥— / 天起',zhtw:'¥— / 天起',ja:'¥— / 日〜',ko:'¥— / 일부터',th:'ตั้งแต่ ¥— / วัน'},
     link:'https://fishing.nice.okinawa',
-    linkLabel:{en:'Fishing charters →',zh:'查看包船钓鱼 →',zhtw:'查看包船釣魚 →',ja:'フィッシングチャーター →',ko:'낚시 차터 보기 →',th:'ดูแพ็คเกจตกปลา →'}
+    linkLabel:{en:'Fishing gear & trips →',zh:'钓鱼装备与行程 →',zhtw:'釣魚裝備與行程 →',ja:'釣り道具とプラン →',ko:'낚시 장비와 일정 →',th:'อุปกรณ์และทริปตกปลา →'}
   },
   {
     id:'gopro',
@@ -773,14 +736,14 @@ const SERVICES = [
   {
     id:'convertible',
     icon:'🏎️',
-    name:{en:'Luxury / Convertible',zh:'豪华车 / 敞篷车',zhtw:'豪華車 / 敞篷車',ja:'ラグジュアリー / オープンカー',ko:'럭셔리 / 오픈카',th:'รถหรู / รถเปิดประทุน'},
+    name:{en:'Family Car / Convertible',zh:'家庭车 / 敞篷车',zhtw:'家庭車 / 敞篷車',ja:'ファミリーカー / オープンカー',ko:'패밀리카 / 오픈카',th:'รถครอบครัว / รถเปิดประทุน'},
     desc:{
-      en:'Came for snorkelling, ended up cruising the Okinawa coast in a convertible? We get it. Available from our premium partner garage.',
-      zh:'来浮潜的，结果开着敞篷车兜了一圈海岸线——很正常。我们的豪车合作伙伴备有多种车型。',
-      zhtw:'來浮潛的，結果開著敞篷車兜了一圈海岸線——很正常。我們的豪車合作夥伴備有多種車型。',
-      ja:'シュノーケルのつもりが、気づいたらオープンカーで沖縄の海岸線をドライブ——それもいい。プレミアム提携ガレージで対応。',
-      ko:'스노클링하러 왔다가 컨버터블로 오키나와 해안선을 달리게 됐다고요? 당연하죠. 프리미엄 파트너 차고에서 이용 가능.',
-      th:'มาดำน้ำตื้น แต่สุดท้ายไปเที่ยวชายฝั่งโอกินาวาด้วยรถเปิดประทุน — เข้าใจเลย มีให้บริการจากการาจพาร์ทเนอร์พรีเมียม'
+      en:'Family cars, SUVs, MPVs, convertibles and premium models — we match the vehicle to your route, luggage, group size and island mood.',
+      zh:'家庭车、SUV、MPV、敞篷车、豪华车型应有尽有。根据人数、行李、路线和当天心情，帮你匹配合适车型。',
+      zhtw:'家庭車、SUV、MPV、敞篷車、豪華車型應有盡有。根據人數、行李、路線和當天心情，幫你匹配合適車型。',
+      ja:'ファミリーカー、SUV、MPV、オープンカー、プレミアム車種まで。人数、荷物、ルート、その日の気分に合わせて車を手配します。',
+      ko:'패밀리카, SUV, MPV, 오픈카, 프리미엄 차량까지 다양하게 준비됩니다. 인원, 짐, 루트와 여행 분위기에 맞춰 차량을 추천합니다.',
+      th:'มีทั้งรถครอบครัว SUV MPV รถเปิดประทุน และรุ่นพรีเมียม เราช่วยจับคู่รถให้เหมาะกับเส้นทาง สัมภาระ จำนวนคน และอารมณ์ของทริป'
     },
     price:{en:'From ¥— / day',zh:'¥— / 天起',zhtw:'¥— / 天起',ja:'¥— / 日〜',ko:'¥— / 일부터',th:'ตั้งแต่ ¥— / วัน'},
     link:null,
@@ -801,22 +764,6 @@ const SERVICES = [
     price:{en:'Enquire for rates',zh:'联系询价',zhtw:'聯繫詢價',ja:'お問い合わせください',ko:'문의해 주세요',th:'สอบถามราคา'},
     link:'https://golf.nice.okinawa',
     linkLabel:{en:'Golf page →',zh:'高尔夫页面 →',zhtw:'高爾夫頁面 →',ja:'ゴルフページ →',ko:'골프 페이지 →',th:'หน้ากอล์ฟ →'}
-  },
-  {
-    id:'fishing-charter',
-    icon:'🚢',
-    name:{en:'Fishing Charter',zh:'包船海钓',zhtw:'包船海釣',ja:'フィッシングチャーター',ko:'낚시 차터',th:'เช่าเรือตกปลา'},
-    desc:{
-      en:'Private fishing charters from Chatan port. GT, Amberjack, Tuna and more. No experience needed for most plans.',
-      zh:'从北谷港出发的私人包船钓鱼。GT、红甘鲹、金枪鱼等，大多数方案无需钓鱼经验。',
-      zhtw:'從北谷港出發的私人包船釣魚。GT、紅甘鰺、金槍魚等，大多數方案無需釣魚經驗。',
-      ja:'北谷港からのプライベートチャーター。GT・カンパチ・マグロなど。ほとんどのプランは未経験OK。',
-      ko:'차탄 항구에서 출발하는 프라이빗 낚시 차터. GT, 부시리, 참치 등. 대부분의 플랜은 경험 불필요.',
-      th:'เช่าเรือส่วนตัวออกจากท่าเรือชาตัน GT ปลาหางเหลือง ปลาทูน่า และอื่นๆ แผนส่วนใหญ่ไม่ต้องมีประสบการณ์'
-    },
-    price:{en:'From ¥— / charter',zh:'¥— / 艘起',zhtw:'¥— / 艘起',ja:'¥— / チャーター〜',ko:'¥— / 차터부터',th:'ตั้งแต่ ¥— / ลำ'},
-    link:'https://fishing.nice.okinawa',
-    linkLabel:{en:'See fishing plans →',zh:'查看钓鱼方案 →',zhtw:'查看釣魚方案 →',ja:'釣りプランを見る →',ko:'낚시 플랜 보기 →',th:'ดูแพ็คเกจตกปลา →'}
   },
   {
     id:'snorkel-tour',
@@ -869,8 +816,8 @@ const ALSO = [
   {
     icon:'🎣',
     bg:'linear-gradient(135deg,#0d2240,#0e3a6b)',
-    title:{en:'Fishing Charter',zh:'包船海钓',zhtw:'包船海釣',ja:'フィッシングチャーター',ko:'낚시 차터',th:'เช่าเรือตกปลา'},
-    sub:{en:'GT, Tuna, Amberjack — Chatan Port',zh:'GT、金枪鱼、红甘鲹，北谷港',zhtw:'GT、金槍魚、紅甘鰺，北谷港',ja:'GT・マグロ・カンパチ — 北谷港',ko:'GT, 참치, 부시리 — 차탄 항구',th:'GT ปลาทูน่า ปลาหางเหลือง — ท่าเรือชาตัน'},
+    title:{en:'Fishing Gear',zh:'钓鱼装备',zhtw:'釣魚裝備',ja:'釣り道具',ko:'낚시 장비',th:'อุปกรณ์ตกปลา'},
+    sub:{en:'Rods, reels, cooler boxes and local fishing support',zh:'鱼竿、卷线器、保温箱与本地钓鱼支持',zhtw:'魚竿、捲線器、保溫箱與在地釣魚支援',ja:'ロッド、リール、クーラーボックス、現地サポート',ko:'낚싯대, 릴, 쿨러박스와 현지 낚시 지원',th:'คันเบ็ด รอก กล่องเก็บความเย็น และการสนับสนุนในพื้นที่'},
     link:'https://fishing.nice.okinawa'
   },
   {
@@ -964,6 +911,12 @@ function toggleFaq(i){
 }
 
 // ── Float Contact ─────────────────────────────────────────
+function smoothTo(e,id){
+  e.preventDefault();
+  var t=document.getElementById(id);
+  if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
 function toggleFloat(){
   var toggle=document.getElementById('float-toggle');
   var channels=document.getElementById('float-channels');
