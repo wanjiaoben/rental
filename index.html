@@ -112,10 +112,13 @@ section{padding:5.5rem 0;}
 /* FEATURE STRIP (rental + snorkel kit) */
 .feature-section{background:var(--navy);position:relative;}
 .feature-section::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--teal),transparent);}
-.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
+.feature-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:2rem;align-items:stretch;}
 .feature-card{background:var(--glass);border:1px solid var(--glass-b);border-radius:12px;overflow:hidden;transition:all .3s;position:relative;}
 .feature-card:hover{transform:translateY(-4px);box-shadow:0 24px 56px rgba(0,0,0,.55);}
 .feature-card.primary{border-color:rgba(200,164,74,.35);}
+.feature-card.primary .feature-img{height:300px;font-size:4.4rem;background:linear-gradient(135deg,rgba(200,164,74,.18),var(--ocean) 45%,var(--blue));}
+.feature-card.primary .feature-name{font-size:1.95rem;}
+.feature-card.primary .feature-desc{font-size:.95rem;}
 .feature-badge{position:absolute;top:1rem;left:1rem;background:var(--gold);color:var(--deep);padding:.2rem .65rem;border-radius:3px;font-size:.6rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;}
 .feature-img{width:100%;height:240px;object-fit:cover;display:block;background:linear-gradient(135deg,var(--ocean),var(--blue));display:flex;align-items:center;justify-content:center;font-size:3.5rem;}
 .feature-body{padding:1.75rem;}
@@ -310,12 +313,12 @@ footer{background:#030810;border-top:1px solid var(--glass-b);padding:2.5rem 0 1
     <div class="hero-eyebrow" data-th>โอกินาวา — เช่าและประสบการณ์</div>
 
     <h1 class="hero-title">
-      <span data-en>The gear is rented.<br><em>The journey is yours.</em></span>
-      <span data-zh>装备都是租的，<br><em>但是美好的旅行体验是自己的。</em></span>
-      <span data-zhtw>裝備都是租的，<br><em>但是美好的旅行體驗是自己的。</em></span>
-      <span data-ja>レンタルなのは装備だけ。<br><em>旅の体験はあなた自身のもの。</em></span>
-      <span data-ko>장비는 빌린 것이지만,<br><em>멋진 여행 경험은 당신의 것입니다.</em></span>
-      <span data-th>อุปกรณ์อาจเป็นของเช่า<br><em>แต่ประสบการณ์ดีๆ เป็นของคุณ</em></span>
+      <span data-en>The stuff is rented.<br><em>The beautiful travel experiences are yours.</em></span>
+      <span data-zh>东西都是租的，<br><em>美好的旅行体验都是自己的。</em></span>
+      <span data-zhtw>東西都是租的，<br><em>美好的旅行體驗都是自己的。</em></span>
+      <span data-ja>ものはレンタル。<br><em>素敵な旅の体験は、すべてあなた自身のもの。</em></span>
+      <span data-ko>물건은 빌린 것이지만,<br><em>아름다운 여행 경험은 모두 당신의 것입니다.</em></span>
+      <span data-th>สิ่งของเป็นของเช่า<br><em>แต่ประสบการณ์การเดินทางดีๆ เป็นของคุณทั้งหมด</em></span>
     </h1>
 
     <p class="hero-sub" data-en>Car rental + all kinds of kits = the ultimate Okinawa freedom combo. Stop anytime, swim anytime, tee off anytime, shop anytime. No tour group rushing the schedule, no business-trip stress — just you and the ocean.</p>
