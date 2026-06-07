@@ -185,6 +185,21 @@ section{padding:5.5rem 0;}
 .faq-item.open .faq-a{max-height:300px;}
 .faq-a-inner{padding:0 1.4rem 1.1rem;font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.75;border-top:1px solid var(--glass-b);padding-top:.9rem;}
 
+/* CONTACT */
+.contact-section{background:var(--navy);position:relative;padding:5.5rem 0;}
+.contact-section::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--teal),var(--gold),transparent);}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;}
+.contact-copy{max-width:560px;}
+.contact-actions{display:grid;gap:.85rem;}
+.contact-card{display:flex;align-items:center;gap:.85rem;background:var(--glass);border:1px solid var(--glass-b);border-radius:10px;padding:1rem 1.1rem;text-decoration:none;color:var(--white);transition:all .2s;}
+.contact-card:hover{border-color:rgba(255,255,255,.24);transform:translateY(-2px);}
+.contact-card-icon{width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.contact-card-icon.wechat{background:#09b83e;}
+.contact-card-icon.whatsapp{background:#25d366;}
+.contact-card-icon.email{background:#4a90d9;}
+.contact-card-name{font-weight:700;font-size:.9rem;}
+.contact-card-value{font-size:.76rem;color:var(--muted);margin-top:.12rem;}
+
 /* FLOAT CONTACT */
 .float-contact{position:fixed;bottom:1.75rem;right:1.75rem;z-index:900;display:flex;flex-direction:column;align-items:flex-end;gap:.6rem;}
 .float-toggle{width:52px;height:52px;border-radius:50%;background:var(--gold);color:var(--deep);border:none;cursor:pointer;font-size:1.3rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(200,164,74,.45);transition:all .3s;flex-shrink:0;}
@@ -242,6 +257,7 @@ footer{background:#030810;border-top:1px solid var(--glass-b);padding:2.5rem 0 1
   .steps{grid-template-columns:1fr 1fr;}
   .steps::before{display:none;}
   .footer-inner{grid-template-columns:1fr 1fr;}
+  .contact-grid{grid-template-columns:1fr;}
 }
 @media(max-width:700px){
   .nav-links{display:none;}
@@ -560,6 +576,51 @@ footer{background:#030810;border-top:1px solid var(--glass-b);padding:2.5rem 0 1
 </section>
 
 
+<!-- ═══ CONTACT ═══════════════════════════════════════════ -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-copy">
+        <div class="s-label reveal" data-en>Contact</div>
+        <div class="s-label reveal" data-zh>联系</div>
+        <div class="s-label reveal" data-zhtw>聯絡</div>
+        <div class="s-label reveal" data-ja>お問い合わせ</div>
+        <div class="s-label reveal" data-ko>문의</div>
+        <div class="s-label reveal" data-th>ติดต่อ</div>
+        <h2 class="s-title reveal">
+          <span data-en>Reserve Rental Gear</span>
+          <span data-zh>预约租赁装备</span>
+          <span data-zhtw>預約租賃裝備</span>
+          <span data-ja>レンタルを予約する</span>
+          <span data-ko>렌탈 예약</span>
+          <span data-th>จองอุปกรณ์เช่า</span>
+        </h2>
+        <p class="s-desc reveal" data-en>Tell us your dates, hotel or pickup point, group size and the gear you need. We will reply by email, WhatsApp or WeChat.</p>
+        <p class="s-desc reveal" data-zh>告诉我们日期、酒店或取车地点、人数和需要的装备。我们会通过邮件、WhatsApp 或微信回复。</p>
+        <p class="s-desc reveal" data-zhtw>告訴我們日期、酒店或取車地點、人數和需要的裝備。我們會透過 Email、WhatsApp 或微信回覆。</p>
+        <p class="s-desc reveal" data-ja>日程、ホテルまたは受け渡し場所、人数、必要なレンタル品をお知らせください。メール、WhatsApp、WeChatで返信します。</p>
+        <p class="s-desc reveal" data-ko>날짜, 호텔 또는 픽업 장소, 인원, 필요한 장비를 알려 주세요. 이메일, WhatsApp 또는 WeChat으로 답변드립니다.</p>
+        <p class="s-desc reveal" data-th>แจ้งวันที่ โรงแรมหรือจุดรับ จำนวนคน และอุปกรณ์ที่ต้องการ เราจะตอบกลับทางอีเมล WhatsApp หรือ WeChat</p>
+      </div>
+      <div class="contact-actions reveal">
+        <a href="mailto:info@nice.okinawa" class="contact-card">
+          <div class="contact-card-icon email">✉️</div>
+          <div><div class="contact-card-name">Email</div><div class="contact-card-value">info@nice.okinawa</div></div>
+        </a>
+        <a href="https://wa.me/818070895239680" class="contact-card" target="_blank" rel="noopener">
+          <div class="contact-card-icon whatsapp">💬</div>
+          <div><div class="contact-card-name">WhatsApp</div><div class="contact-card-value">+81 70-8952-3968</div></div>
+        </a>
+        <a href="weixin://dl/chat?OkinawaOnline" class="contact-card" onclick="copyWechat(event)">
+          <div class="contact-card-icon wechat">💬</div>
+          <div><div class="contact-card-name">WeChat 微信</div><div class="contact-card-value">OkinawaOnline</div></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- ═══ FOOTER ════════════════════════════════════════════ -->
 <footer>
   <div class="container">
@@ -640,7 +701,14 @@ footer{background:#030810;border-top:1px solid var(--glass-b);padding:2.5rem 0 1
     <span data-ko>더보기</span>
     <span data-th>เพิ่ม</span>
   </a>
-  <a class="float-nav-btn" href="#faq" onclick="smoothTo(event,'faq')">FAQ</a>
+  <a class="float-nav-btn" href="#contact" onclick="smoothTo(event,'contact')">
+    <span data-en>Contact</span>
+    <span data-zh>联系</span>
+    <span data-zhtw>聯絡</span>
+    <span data-ja>連絡</span>
+    <span data-ko>문의</span>
+    <span data-th>ติดต่อ</span>
+  </a>
 </div>
 
 <!-- ═══ FLOAT CONTACT ══════════════════════════════════════ -->
