@@ -14,7 +14,7 @@
   [data-en],[data-zh],[data-zhtw],[data-ja],[data-ko],[data-th]{display:none !important;visibility:hidden;}
   html[data-lang=en]   [data-en]   {display:revert !important;visibility:visible;}
   html[data-lang=zh]   [data-zh]   {display:revert !important;visibility:visible;}
-  html[data-lang=zh-TW][data-zhtw] {display:revert !important;visibility:visible;}
+  html[data-lang=zh-TW] [data-zhtw] {display:revert !important;visibility:visible;}
   html[data-lang=ja]   [data-ja]   {display:revert !important;visibility:visible;}
   html[data-lang=ko]   [data-ko]   {display:revert !important;visibility:visible;}
   html[data-lang=th]   [data-th]   {display:revert !important;visibility:visible;}
@@ -739,6 +739,7 @@ footer{background:#030810;border-top:1px solid var(--glass-b);padding:2.5rem 0 1
 
 // ── Language ──────────────────────────────────────────────
 function L(){return document.documentElement.getAttribute('data-lang')||'en';}
+function LK(){var lang=L();return lang==='zh-TW'?'zhtw':lang;}
 
 function setLang(lang){
   document.documentElement.setAttribute('data-lang',lang);
@@ -856,19 +857,20 @@ const SERVICES = [
 
 function buildServices(){
   var lang=L();
+  var key=LK();
   var g=document.getElementById('services-grid');
   if(!g)return;
   g.innerHTML=SERVICES.map(function(s){
-    var name=s.name[lang]||s.name.en;
-    var desc=s.desc[lang]||s.desc.en;
-    var price=s.price[lang]||s.price.en;
+    var name=s.name[key]||s.name.en;
+    var desc=s.desc[key]||s.desc.en;
+    var price=s.price[key]||s.price.en;
     var linkHtml='';
     if(s.link&&s.linkLabel){
-      var ll=s.linkLabel[lang]||s.linkLabel.en;
+      var ll=s.linkLabel[key]||s.linkLabel.en;
       linkHtml='<a href="'+s.link+'" target="_blank" class="svc-link">'+ll+'</a>';
     } else {
       var enquire={en:'Enquire →',zh:'询价 →',zhtw:'詢價 →',ja:'問い合わせ →',ko:'문의 →',th:'สอบถาม →'};
-      linkHtml='<a href="#" onclick="toggleFloat();return false;" class="svc-link">'+(enquire[lang]||enquire.en)+'</a>';
+      linkHtml='<a href="#" onclick="toggleFloat();return false;" class="svc-link">'+(enquire[key]||enquire.en)+'</a>';
     }
     return '<div class="service-card'+(s.link?' link-out':'')+' reveal">'
       +'<div class="svc-icon">'+s.icon+'</div>'
@@ -915,12 +917,12 @@ const ALSO = [
 ];
 
 function buildAlso(){
-  var lang=L();
+  var key=LK();
   var g=document.getElementById('also-grid');
   if(!g)return;
   g.innerHTML=ALSO.map(function(a){
-    var title=a.title[lang]||a.title.en;
-    var sub=a.sub[lang]||a.sub.en;
+    var title=a.title[key]||a.title.en;
+    var sub=a.sub[key]||a.sub.en;
     var wrap=a.link?'<a href="'+a.link+'" target="_blank" class="also-card reveal">':'<div class="also-card reveal">';
     var wrapEnd=a.link?'</a>':'</div>';
     return wrap
@@ -960,12 +962,12 @@ const FAQS = [
 ];
 
 function buildFAQ(){
-  var lang=L();
+  var key=LK();
   var list=document.getElementById('faq-list');
   if(!list)return;
   list.innerHTML=FAQS.map(function(f,i){
-    var q=f.q[lang]||f.q.en;
-    var a=f.a[lang]||f.a.en;
+    var q=f.q[key]||f.q.en;
+    var a=f.a[key]||f.a.en;
     return '<div class="faq-item" id="faq-'+i+'">'
       +'<button class="faq-q" onclick="toggleFaq('+i+')">'
       +'<span>'+q+'</span><span class="faq-icon">+</span></button>'
