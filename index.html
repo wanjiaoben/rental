@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Okinawa Rental | rental.nice.okinawa</title>
-<meta name="description" content="Okinawa car rental, snorkel gear, BBQ, fishing equipment and more. Pickup & delivery available. Contact via WhatsApp or WeChat.">
+<meta name="description" content="Okinawa car rental, snorkel gear, BBQ, fishing equipment and more. Pickup & delivery available. English enquiries via WhatsApp or email.">
 <meta property="og:title" content="Okinawa Rental | rental.nice.okinawa">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://rental.nice.okinawa">
@@ -191,17 +191,35 @@ section{padding:5.5rem 0;}
 /* CONTACT */
 .contact-section{background:var(--navy);position:relative;padding:5.5rem 0;}
 .contact-section::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--teal),var(--gold),transparent);}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;}
 .contact-copy{max-width:560px;}
 .contact-actions{display:grid;gap:.85rem;}
 .contact-card{display:flex;align-items:center;gap:.85rem;background:var(--glass);border:1px solid var(--glass-b);border-radius:10px;padding:1rem 1.1rem;text-decoration:none;color:var(--white);transition:all .2s;}
 .contact-card:hover{border-color:rgba(255,255,255,.24);transform:translateY(-2px);}
+.contact-card.primary-contact{border-color:rgba(37,211,102,.45);background:rgba(37,211,102,.1);}
 .contact-card-icon{width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .contact-card-icon.wechat{background:#09b83e;}
 .contact-card-icon.whatsapp{background:#25d366;}
 .contact-card-icon.email{background:#4a90d9;}
 .contact-card-name{font-weight:700;font-size:.9rem;}
 .contact-card-value{font-size:.76rem;color:var(--muted);margin-top:.12rem;}
+.trust-badge{display:inline-flex;align-items:center;gap:.45rem;background:rgba(0,180,200,.1);border:1px solid rgba(0,180,200,.28);border-radius:999px;padding:.4rem .8rem;margin-top:1.25rem;color:rgba(255,255,255,.78);font-size:.78rem;font-weight:700;}
+.lead-form{background:rgba(255,255,255,.04);border:1px solid var(--glass-b);border-radius:10px;padding:1rem;display:grid;gap:.7rem;}
+.lead-form-row{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;}
+.lead-field{width:100%;background:rgba(255,255,255,.06);border:1px solid var(--glass-b);border-radius:7px;color:var(--white);font:inherit;font-size:.82rem;padding:.75rem .85rem;outline:none;}
+.lead-field::placeholder{color:rgba(255,255,255,.35);}
+.lead-field:focus{border-color:rgba(0,180,200,.65);box-shadow:0 0 0 3px rgba(0,180,200,.12);}
+textarea.lead-field{min-height:92px;resize:vertical;}
+.lead-actions{display:flex;gap:.65rem;flex-wrap:wrap;}
+.lead-submit,.lead-whatsapp{border:none;border-radius:7px;padding:.8rem 1rem;font-family:var(--font-b);font-size:.78rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:.4rem;transition:all .2s;}
+.lead-submit{background:var(--gold);color:var(--deep);}
+.lead-whatsapp{background:#25d366;color:#05130a;}
+.lead-submit:hover,.lead-whatsapp:hover{transform:translateY(-2px);}
+.pulse-cta{animation:pulseCta 1.8s ease-in-out infinite;}
+@keyframes pulseCta{0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,.38)}55%{box-shadow:0 0 0 12px rgba(37,211,102,0)}}
+.cn-only{display:none !important;}
+html[data-lang=zh] .cn-only,html[data-lang=zh-TW] .cn-only{display:flex !important;}
+@media(max-width:700px){.lead-form-row{grid-template-columns:1fr;}}
 
 /* FLOAT CONTACT */
 .float-contact{position:fixed;bottom:1.75rem;right:1.75rem;z-index:900;display:flex;flex-direction:column;align-items:flex-end;gap:.6rem;}
@@ -631,26 +649,64 @@ footer{background:#030810;border-top:1px solid var(--glass-b);padding:2.5rem 0 1
           <span data-ko>렌탈 예약</span>
           <span data-th>จองอุปกรณ์เช่า</span>
         </h2>
-        <p class="s-desc reveal" data-en>Tell us your dates, hotel or pickup point, group size and the gear you need. We will reply by email, WhatsApp or WeChat.</p>
+        <p class="s-desc reveal" data-en>Tell us your dates, hotel or pickup point, group size and the gear you need. WhatsApp is fastest; email works too.</p>
         <p class="s-desc reveal" data-zh>告诉我们日期、酒店或取车地点、人数和需要的装备。我们会通过邮件、WhatsApp 或微信回复。</p>
         <p class="s-desc reveal" data-zhtw>告訴我們日期、酒店或取車地點、人數和需要的裝備。我們會透過 Email、WhatsApp 或微信回覆。</p>
-        <p class="s-desc reveal" data-ja>日程、ホテルまたは受け渡し場所、人数、必要なレンタル品をお知らせください。メール、WhatsApp、WeChatで返信します。</p>
-        <p class="s-desc reveal" data-ko>날짜, 호텔 또는 픽업 장소, 인원, 필요한 장비를 알려 주세요. 이메일, WhatsApp 또는 WeChat으로 답변드립니다.</p>
-        <p class="s-desc reveal" data-th>แจ้งวันที่ โรงแรมหรือจุดรับ จำนวนคน และอุปกรณ์ที่ต้องการ เราจะตอบกลับทางอีเมล WhatsApp หรือ WeChat</p>
+        <p class="s-desc reveal" data-ja>日程、ホテルまたは受け渡し場所、人数、必要なレンタル品をお知らせください。WhatsAppが最も早く、メールでも対応できます。</p>
+        <p class="s-desc reveal" data-ko>날짜, 호텔 또는 픽업 장소, 인원, 필요한 장비를 알려 주세요. WhatsApp이 가장 빠르며 이메일도 가능합니다.</p>
+        <p class="s-desc reveal" data-th>แจ้งวันที่ โรงแรมหรือจุดรับ จำนวนคน และอุปกรณ์ที่ต้องการ WhatsApp เร็วที่สุด และใช้อีเมลได้เช่นกัน</p>
+        <div class="trust-badge reveal">
+          <span data-en>✓ Local Okinawa team · English support</span>
+          <span data-zh>✓ 冲绳本地团队 · 中文服务</span>
+          <span data-zhtw>✓ 沖繩在地團隊 · 中文服務</span>
+          <span data-ja>✓ 沖縄現地チーム · 英語対応</span>
+          <span data-ko>✓ 오키나와 현지 팀 · 영어 지원</span>
+          <span data-th>✓ ทีมท้องถิ่นโอกินาวา · รองรับภาษาอังกฤษ</span>
+        </div>
       </div>
       <div class="contact-actions reveal">
-        <a href="mailto:info@nice.okinawa" class="contact-card">
+        <a href="https://wa.me/818070895239680?text=Hi%20Nice%20Okinawa%2C%20I%27d%20like%20to%20ask%20about%20rental%20gear%20and%20car%20rental." class="contact-card primary-contact pulse-cta" target="_blank" rel="noopener" onclick="trackContact('contact_whatsapp',{location:'contact_card'});">
+          <div class="contact-card-icon whatsapp">💬</div>
+          <div><div class="contact-card-name">WhatsApp</div><div class="contact-card-value" data-en>Fastest reply for English</div><div class="contact-card-value" data-zh>英文咨询最快回复</div><div class="contact-card-value" data-zhtw>英文諮詢最快回覆</div><div class="contact-card-value" data-ja>英語での連絡が最速</div><div class="contact-card-value" data-ko>영어 문의는 가장 빠른 답변</div><div class="contact-card-value" data-th>ตอบเร็วที่สุดสำหรับภาษาอังกฤษ</div></div>
+        </a>
+        <a href="mailto:info@nice.okinawa?subject=Okinawa%20rental%20enquiry" class="contact-card" onclick="trackContact('contact_email',{location:'contact_card'});">
           <div class="contact-card-icon email">✉️</div>
           <div><div class="contact-card-name">Email</div><div class="contact-card-value">info@nice.okinawa</div></div>
         </a>
-        <a href="https://wa.me/818070895239680" class="contact-card" target="_blank" rel="noopener">
-          <div class="contact-card-icon whatsapp">💬</div>
-          <div><div class="contact-card-name">WhatsApp</div><div class="contact-card-value">+81 70-8952-3968</div></div>
-        </a>
-        <a href="weixin://dl/chat?OkinawaOnline" class="contact-card" onclick="copyWechat(event)">
+        <a href="weixin://dl/chat?OkinawaOnline" class="contact-card cn-only" onclick="copyWechat(event);trackContact('contact_wechat',{location:'contact_card'});">
           <div class="contact-card-icon wechat">💬</div>
           <div><div class="contact-card-name">WeChat 微信</div><div class="contact-card-value">OkinawaOnline</div></div>
         </a>
+        <form class="lead-form" id="lead-form">
+          <div class="lead-form-row">
+            <input class="lead-field" id="lead-name" name="name" autocomplete="name" placeholder="Name" required>
+            <input class="lead-field" id="lead-contact" name="contact" autocomplete="email" placeholder="Email / WhatsApp" required>
+          </div>
+          <div class="lead-form-row">
+            <input class="lead-field" id="lead-dates" name="dates" placeholder="Travel dates">
+            <input class="lead-field" id="lead-pax" name="pax" placeholder="People / car type">
+          </div>
+          <textarea class="lead-field" id="lead-message" name="message" placeholder="What would you like to rent? Car, snorkel kit, BBQ, fishing gear, golf..."></textarea>
+          <input type="text" id="cf-website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+          <div class="lead-actions">
+            <button type="submit" class="lead-submit">
+              <span data-en>Send Enquiry</span>
+              <span data-zh>发送咨询</span>
+              <span data-zhtw>送出諮詢</span>
+              <span data-ja>問い合わせ送信</span>
+              <span data-ko>문의 보내기</span>
+              <span data-th>ส่งคำถาม</span>
+            </button>
+            <a href="https://wa.me/818070895239680?text=Hi%20Nice%20Okinawa%2C%20I%27d%20like%20to%20ask%20about%20rental%20gear%20and%20car%20rental." id="lead-whatsapp" class="lead-whatsapp pulse-cta" target="_blank" rel="noopener" onclick="trackContact('contact_whatsapp',{location:'lead_form'});">
+              <span data-en>WhatsApp Now</span>
+              <span data-zh>WhatsApp 咨询</span>
+              <span data-zhtw>WhatsApp 諮詢</span>
+              <span data-ja>WhatsAppで相談</span>
+              <span data-ko>WhatsApp 문의</span>
+              <span data-th>ถามทาง WhatsApp</span>
+            </a>
+          </div>
+        </form>
       </div>
     </div>
   </div>
@@ -750,17 +806,17 @@ footer{background:#030810;border-top:1px solid var(--glass-b);padding:2.5rem 0 1
 <!-- ═══ FLOAT CONTACT ══════════════════════════════════════ -->
 <div class="float-contact" id="float-contact">
   <div class="float-channels" id="float-channels">
-    <a href="weixin://dl/chat?OkinawaOnline" class="float-channel" onclick="copyWechat(event)">
-      <div class="float-ch-icon wechat">💬</div>
-      <div><div class="float-ch-name">WeChat 微信</div><div class="float-ch-val">OkinawaOnline</div></div>
-    </a>
-    <a href="https://wa.me/818070895239680" class="float-channel" target="_blank" rel="noopener">
+    <a href="https://wa.me/818070895239680?text=Hi%20Nice%20Okinawa%2C%20I%27d%20like%20to%20ask%20about%20rental%20gear%20and%20car%20rental." class="float-channel pulse-cta" target="_blank" rel="noopener" onclick="trackContact('contact_whatsapp',{location:'float'});">
       <div class="float-ch-icon whatsapp">💬</div>
       <div><div class="float-ch-name">WhatsApp</div><div class="float-ch-val">+81 70-8952-3968</div></div>
     </a>
-    <a href="mailto:info@nice.okinawa" class="float-channel">
+    <a href="mailto:info@nice.okinawa?subject=Okinawa%20rental%20enquiry" class="float-channel" onclick="trackContact('contact_email',{location:'float'});">
       <div class="float-ch-icon email">✉️</div>
       <div><div class="float-ch-name">Email</div><div class="float-ch-val">info@nice.okinawa</div></div>
+    </a>
+    <a href="weixin://dl/chat?OkinawaOnline" class="float-channel cn-only" onclick="copyWechat(event);trackContact('contact_wechat',{location:'float'});">
+      <div class="float-ch-icon wechat">💬</div>
+      <div><div class="float-ch-name">WeChat 微信</div><div class="float-ch-val">OkinawaOnline</div></div>
     </a>
   </div>
   <button class="float-toggle" id="float-toggle" onclick="toggleFloat()" aria-label="Contact">✉</button>
@@ -769,6 +825,10 @@ footer{background:#030810;border-top:1px solid var(--glass-b);padding:2.5rem 0 1
 
 <!-- ═══ SCRIPTS ════════════════════════════════════════════ -->
 <script>
+
+const LEAD_ENDPOINT = 'https://rental-lead-worker.gerheidicn.workers.dev';
+const CONTACT_EMAIL = 'info@nice.okinawa';
+const WHATSAPP_NUMBER = '818070895239680';
 
 // ── Language ──────────────────────────────────────────────
 function L(){return document.documentElement.getAttribute('data-lang')||'en';}
@@ -1023,6 +1083,106 @@ function smoothTo(e,id){
   if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
 }
 
+function trackContact(eventName,props){
+  var data=Object.assign({lang:L(),page:'rental'},props||{});
+  var payload=Object.assign({
+    type:'contact_event',
+    event_name:eventName,
+    site:location.hostname,
+    path:location.pathname,
+    title:document.title,
+    url:location.href,
+    ts:new Date().toISOString()
+  },data);
+  try{
+    var body=JSON.stringify(payload);
+    if(navigator.sendBeacon){
+      navigator.sendBeacon('https://analytics.nice.okinawa/collect',new Blob([body],{type:'application/json'}));
+    }else{
+      fetch('https://analytics.nice.okinawa/collect',{method:'POST',headers:{'content-type':'application/json'},body:body,keepalive:true,mode:'cors'}).catch(function(){});
+    }
+  }catch(e){}
+  try{if(window.umami&&typeof window.umami.track==='function')window.umami.track(eventName,data);}catch(e){}
+  try{if(window.plausible)window.plausible(eventName,{props:data});}catch(e){}
+  try{if(window.gtag)window.gtag('event',eventName,data);}catch(e){}
+  try{window.dataLayer=window.dataLayer||[];window.dataLayer.push(Object.assign({event:eventName},data));}catch(e){}
+  try{document.dispatchEvent(new CustomEvent(eventName,{detail:data}));}catch(e){}
+}
+
+function leadData(){
+  var contact=(document.getElementById('lead-contact')||{}).value||'';
+  var pax=(document.getElementById('lead-pax')||{}).value||'';
+  var message=(document.getElementById('lead-message')||{}).value||'';
+  return {
+    name:(document.getElementById('lead-name')||{}).value||'',
+    contact:contact,
+    email:contact,
+    dates:(document.getElementById('lead-dates')||{}).value||'',
+    pax:pax,
+    group:pax,
+    gear:message,
+    message:message,
+    website:(document.getElementById('cf-website')||{}).value||'',
+    lang:L(),
+    page:'rental'
+  };
+}
+
+function leadText(data){
+  return [
+    'Okinawa rental enquiry',
+    '',
+    'Name: '+(data.name||'-'),
+    'Contact: '+(data.contact||'-'),
+    'Travel dates: '+(data.dates||'-'),
+    'People / car type: '+(data.pax||'-'),
+    '',
+    'Message:',
+    data.message||'-'
+  ].join('\n');
+}
+
+function mailtoHref(data){
+  return 'mailto:'+CONTACT_EMAIL
+    +'?subject='+encodeURIComponent('Okinawa rental enquiry')
+    +'&body='+encodeURIComponent(leadText(data));
+}
+
+function whatsappHref(data){
+  return 'https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent(leadText(data));
+}
+
+function updateLeadWhatsApp(){
+  var a=document.getElementById('lead-whatsapp');
+  if(a)a.href=whatsappHref(leadData());
+}
+
+function initLeadForm(){
+  var form=document.getElementById('lead-form');
+  if(!form)return;
+  form.addEventListener('input',updateLeadWhatsApp);
+  updateLeadWhatsApp();
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var data=leadData();
+    trackContact('contact_form_submit',{location:'lead_form'});
+    if(!LEAD_ENDPOINT){
+      trackContact('contact_form_mailto_fallback',{location:'lead_form'});
+      window.location.href=mailtoHref(data);
+      return;
+    }
+    fetch(LEAD_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
+      .then(function(res){
+        if(!res.ok)throw new Error('Lead endpoint failed');
+        trackContact('contact_form_success',{location:'lead_form'});
+      })
+      .catch(function(){
+        trackContact('contact_form_mailto_fallback',{location:'lead_form',reason:'endpoint_error'});
+        window.location.href=mailtoHref(data);
+      });
+  });
+}
+
 function toggleFloat(){
   var toggle=document.getElementById('float-toggle');
   var channels=document.getElementById('float-channels');
@@ -1067,6 +1227,7 @@ document.querySelectorAll('.reveal').forEach(function(el){observer.observe(el);}
   buildServices();
   buildAlso();
   buildFAQ();
+  initLeadForm();
 })();
 
 </script>
