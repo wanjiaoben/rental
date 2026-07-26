@@ -2,6 +2,8 @@
 
 > English-first information and inquiry site for Okinawa car rental, snorkel gear, BBQ sets, fishing equipment and travel items with pickup and delivery options.
 
+Commercial intent: Okinawa rental service — car rental support, snorkel gear, BBQ sets & fishing equipment. Pickup & delivery across Okinawa.
+
 Canonical URL: https://rental.nice.okinawa/
 Booking email: info@nice.okinawa
 Service area: Okinawa, Japan
