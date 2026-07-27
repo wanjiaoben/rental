@@ -1,0 +1,49 @@
+# Okinawa Rental Nice Okinawa
+
+> English-first information and inquiry site for Okinawa car rental, snorkel gear, BBQ sets, fishing equipment and travel items with pickup and delivery options.
+
+Commercial intent: Okinawa rental service — car rental support, snorkel gear, BBQ sets & fishing equipment. Pickup & delivery across Okinawa.
+
+Canonical URL: https://rental.nice.okinawa/
+Booking email: info@nice.okinawa
+Service area: Okinawa, Japan
+
+## Services
+
+- Car rental: From compact economy to luxury convertible — multiple partner garages across Okinawa. Pickup & drop-off available at hotels, ports or airports.
+- Snorkel kit: Life jacket, mask, fins — everything you need to jump into Okinawa's clear water right from a roadside beach. Add to car rental or book standalone. Delivery to hotel available.
+- Beach BBQ: Beachside BBQ with full setup — equipment, charcoal and ingredients included. We handle venue reservation. Show up and grill.
+- Fishing gear: Full tackle rental — rods, reels, cooler box and basic accessories. Easy to add to a car rental for relaxed shore fishing along the coast.
+- GoPro / Underwater Camera: Capture your snorkel sessions and fishing fights. Available on request — limited units so book in advance.
+- Family Car / Convertible: Family cars, SUVs, MPVs, convertibles and premium models — we match the vehicle to your route, luggage, group size and island mood.
+- Golf: Okinawa has world-class golf courses with ocean views. We handle tee-time booking, transport and equipment rental.
+- Snorkel Tour: Guided snorkel tours from Ginowan Port. Perfect for first-timers. Guides, safety gear and marine life spotting included.
+
+Prices, vehicle types, delivery availability, venue reservations, equipment availability and booking details vary and must be confirmed before booking.
+
+## Pickup and delivery
+
+Pickup & drop-off available at hotels, ports or airports.
+Add to car rental for a bundle deal. Delivery to hotel or port.
+
+## Page index
+
+- [Home and rental overview](https://rental.nice.okinawa/)
+- [Featured rentals](https://rental.nice.okinawa/#rentals)
+- [All services](https://rental.nice.okinawa/#experiences)
+- [Frequently asked questions](https://rental.nice.okinawa/#faq)
+- [Booking inquiry and contact](https://rental.nice.okinawa/#contact)
+- [XML sitemap](https://rental.nice.okinawa/sitemap.xml)
+- [Crawler policy](https://rental.nice.okinawa/robots.txt)
+
+## Booking information to provide
+
+Tell us your dates, hotel or pickup point, group size and the gear you need. We will reply by email, WhatsApp or WeChat.
+
+## FAQ excerpt
+
+- Can I pick up the car at my hotel? Yes — we offer pickup and drop-off at hotels, ports and the airport. Just let us know your location when booking.
+- Do I need a Japanese driver's licence? An International Driving Permit (IDP) is required for most foreign nationals driving in Japan. We'll confirm requirements for your country when you enquire.
+- Can I add snorkel gear to an existing car rental? Absolutely. Even if you booked your car elsewhere, we can deliver snorkel gear to your hotel or vehicle pickup point.
+- What's included in the BBQ booking? The beach BBQ venue includes equipment, charcoal and ingredients. We handle the reservation — you just bring yourselves and your appetite.
+- What languages do you support? We handle everything in English, Mandarin Chinese and Japanese. Other languages — give it a try, we'll figure it out.
