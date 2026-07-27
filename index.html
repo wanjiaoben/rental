@@ -121,6 +121,7 @@ section{padding:5.5rem 0;}
 .feature-card:hover{transform:translateY(-4px);box-shadow:0 24px 56px rgba(0,0,0,.55);}
 .feature-card.primary{border-color:rgba(200,164,74,.35);}
 .feature-card.primary .feature-img{height:300px;font-size:4.4rem;background:linear-gradient(135deg,rgba(200,164,74,.18),var(--ocean) 45%,var(--blue));}
+.feature-card.primary .feature-img.feature-collage{height:auto;aspect-ratio:2/1;background:#fff;font-size:0;object-fit:contain;}
 .feature-card.primary .feature-name{font-size:1.95rem;}
 .feature-card.primary .feature-desc{font-size:.95rem;}
 .feature-badge{position:absolute;top:1rem;left:1rem;background:var(--gold);color:var(--deep);padding:.2rem .65rem;border-radius:3px;font-size:.6rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;}
@@ -132,6 +133,15 @@ section{padding:5.5rem 0;}
 .feature-items{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1.5rem;}
 .feature-item{display:flex;align-items:center;gap:.6rem;font-size:.82rem;color:rgba(255,255,255,.65);}
 .feature-item::before{content:'✓';color:var(--teal);font-weight:700;flex-shrink:0;}
+.rental-flow{display:flex;flex-direction:column;gap:.55rem;margin:-.2rem 0 1.35rem;padding:.85rem .9rem;border:1px solid rgba(0,180,200,.18);border-radius:8px;background:rgba(0,180,200,.05);}
+html[data-lang=en] .rental-flow[data-en],
+html[data-lang=zh] .rental-flow[data-zh],
+html[data-lang="zh-TW"] .rental-flow[data-zhtw],
+html[data-lang=ja] .rental-flow[data-ja],
+html[data-lang=ko] .rental-flow[data-ko],
+html[data-lang=th] .rental-flow[data-th]{display:flex !important;}
+.rental-flow-step{display:grid;grid-template-columns:1.45rem 1fr;gap:.55rem;align-items:start;font-size:.78rem;line-height:1.6;color:rgba(255,255,255,.66);}
+.rental-flow-step strong{display:flex;align-items:center;justify-content:center;width:1.45rem;height:1.45rem;border-radius:50%;background:rgba(0,180,200,.12);color:var(--teal);font-family:var(--font-d);font-size:.78rem;line-height:1;}
 .feature-price{font-family:var(--font-d);font-size:1.4rem;font-weight:700;color:var(--gold);margin-bottom:.2rem;}
 .feature-price-note{font-size:.72rem;color:var(--muted);margin-bottom:1.25rem;}
 .feature-cta{display:block;text-align:center;background:var(--gold);color:var(--deep);border-radius:4px;padding:.8rem;font-weight:700;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:all .3s;}
@@ -467,7 +477,7 @@ footer{background:#030810;border-top:1px solid var(--glass-b);padding:2.5rem 0 1
         <div class="feature-badge" data-ja>⭐ 人気 No.1</div>
         <div class="feature-badge" data-ko>⭐ 베스트셀러</div>
         <div class="feature-badge" data-th>⭐ ยอดนิยม</div>
-        <div class="feature-img">🚗</div>
+        <img class="feature-img feature-collage" src="img/vehicles/vehicle-collage.jpg" alt="Collage of Okinawa rental vehicles including vans, SUVs, sedans, kei cars and a convertible" width="1200" height="600" loading="lazy">
         <div class="feature-body">
           <div class="feature-name" data-en>Car Rental</div>
           <div class="feature-name" data-zh>租车</div>
@@ -500,6 +510,36 @@ footer{background:#030810;border-top:1px solid var(--glass-b);padding:2.5rem 0 1
             <div class="feature-item" data-ja>英語・中国語・日本語対応</div>
             <div class="feature-item" data-ko>영어·중국어·일본어 지원</div>
             <div class="feature-item" data-th>รองรับภาษาอังกฤษ / จีน / ญี่ปุ่น</div>
+          </div>
+          <div class="rental-flow" data-en>
+            <div class="rental-flow-step"><strong>1</strong><span>Tell us your group size, luggage and favorite car style, and we will suggest a good fit.</span></div>
+            <div class="rental-flow-step"><strong>2</strong><span>Not sure whether your licence or IDP works in Japan? We can check it with you in advance.</span></div>
+            <div class="rental-flow-step"><strong>3</strong><span>Once the quote is confirmed, reserve the car with hotel, port or airport pickup and return.</span></div>
+          </div>
+          <div class="rental-flow" data-zh>
+            <div class="rental-flow-step"><strong>1</strong><span>告诉我们人数、行李量和喜欢的车型，我们会介绍合适的车。</span></div>
+            <div class="rental-flow-step"><strong>2</strong><span>不确定自己的驾照或国际驾照在日本能不能用？我们可以提前帮你确认。</span></div>
+            <div class="rental-flow-step"><strong>3</strong><span>报价确认后即可预约，酒店、港口或机场接送取还。</span></div>
+          </div>
+          <div class="rental-flow" data-zhtw>
+            <div class="rental-flow-step"><strong>1</strong><span>告訴我們人數、行李量和喜歡的車型，我們會介紹合適的車。</span></div>
+            <div class="rental-flow-step"><strong>2</strong><span>不確定自己的駕照或國際駕照在日本能不能用？我們可以提前幫你確認。</span></div>
+            <div class="rental-flow-step"><strong>3</strong><span>報價確認後即可預約，酒店、港口或機場接送取還。</span></div>
+          </div>
+          <div class="rental-flow" data-ja>
+            <div class="rental-flow-step"><strong>1</strong><span>人数、荷物の量、希望の車種を教えてください。合いそうな車をご提案します。</span></div>
+            <div class="rental-flow-step"><strong>2</strong><span>免許証や国際運転免許証が日本で使えるか不安な場合は、事前に一緒に確認できます。</span></div>
+            <div class="rental-flow-step"><strong>3</strong><span>見積もり確認後に予約へ進み、ホテル・港・空港での受け渡しに対応します。</span></div>
+          </div>
+          <div class="rental-flow" data-ko>
+            <div class="rental-flow-step"><strong>1</strong><span>인원, 짐의 양, 원하는 차종을 알려주시면 어울리는 차량을 추천해 드립니다.</span></div>
+            <div class="rental-flow-step"><strong>2</strong><span>운전면허나 국제운전면허증이 일본에서 가능한지 걱정되면 미리 함께 확인해 드립니다.</span></div>
+            <div class="rental-flow-step"><strong>3</strong><span>견적 확인 후 예약하고 호텔, 항구, 공항에서 픽업과 반납을 조율합니다.</span></div>
+          </div>
+          <div class="rental-flow" data-th>
+            <div class="rental-flow-step"><strong>1</strong><span>บอกจำนวนคน จำนวนกระเป๋า และสไตล์รถที่ชอบ เราจะช่วยแนะนำรถที่เหมาะให้</span></div>
+            <div class="rental-flow-step"><strong>2</strong><span>ไม่แน่ใจว่าใบขับขี่หรือใบขับขี่สากลใช้ในญี่ปุ่นได้ไหม? เราช่วยตรวจสอบล่วงหน้าได้</span></div>
+            <div class="rental-flow-step"><strong>3</strong><span>เมื่อยืนยันราคาแล้วจองได้เลย พร้อมรับและคืนรถที่โรงแรม ท่าเรือ หรือสนามบิน</span></div>
           </div>
           <div class="feature-price" data-en>From ¥— / day</div>
           <div class="feature-price" data-zh>从 ¥— / 天起</div>
