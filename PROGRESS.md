@@ -11,3 +11,5 @@ T0706-24 WAN 宪法 v1.5 已同步到 CLAUDE.md；新增域名/API入口切换�
 T0707-14 WAN 宪法 v1.6 已同步到 CLAUDE.md，FREEZE.md 冻结区同步到仓库根目录；新增冻结区、任务三分类、CC 交付六栏规则。
 
 M0727-22 PR #19 分支补充租车车辆拼图与六语三步服务流程，Draft 保持待 Wan 手机审查。
+
+M0808-12 rental 增加站级 From ¥7,000 per day、旺季询价说明、Vehicle priceRange 与 llms 事实，Draft PR 待审。
