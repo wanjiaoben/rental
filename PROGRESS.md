@@ -13,3 +13,5 @@ T0707-14 WAN 宪法 v1.6 已同步到 CLAUDE.md，FREEZE.md 冻结区同步到�
 M0727-22 PR #19 分支补充租车车辆拼图与六语三步服务流程，Draft 保持待 Wan 手机审查。
 
 M0808-12 rental 增加站级 From ¥7,000 per day、旺季询价说明、Vehicle priceRange 与 llms 事实，Draft PR 待审。
+
+RENTAL-COPY-0912-01 rental 修正首页英文 H1、多语价格/旺季说明、浮潜价格占位、询价链接与 HIACE 驾照提示，PR 合并后上线。
