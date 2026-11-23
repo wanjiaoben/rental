@@ -89,3 +89,6 @@
 
 
 HB-269 / BR-2026-039 (2026-11-20): owner-approved four-language Onna Minami Bypass announcement; content and required news indexes only. Publication pending original checks. Existing articles retained.
+
+
+HB-333 / BR-2026-043 (2026-11-23): added the approved multilingual travel-news card linking to the Nice Okinawa articles; existing cards retained.

@@ -26,3 +26,6 @@ RENTAL-COPY-0912-01 rental 修正首页英文 H1、多语价格/旺季说明、�
 
 HB-269 / BR-2026-039 (2026-11-20): owner-approved four-language Onna Minami Bypass announcement; content and required news indexes only. Publication pending original checks. Existing articles retained.
 HB-316 / BR-2026-020-B (2026-11-23): add the approved six-language Shurijo Seiden travel-news card linking to the main-site four-language article; no booking, payment or customer-data changes.
+
+
+HB-333 / BR-2026-043 (2026-11-23): added the approved multilingual travel-news card linking to the Nice Okinawa articles; existing cards retained.
