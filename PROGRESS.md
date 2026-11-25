@@ -32,3 +32,5 @@ HB-333 / BR-2026-043 (2026-11-23): added the approved multilingual travel-news c
 
 
 HB-374 (2026-11-25): news shelf follows page language, preserves manual choice per browsing session, falls back to English then original Chinese; article data unchanged. Preview candidate only, not published.
+
+HB-372 / BR-2026-051 (2026-11-25): approved four-language Tomigusuku Route 331 night restriction news. Official map and translations checked; 26 November remains reserve only. Content-only; no booking/payment/login/entitlement changes.
