@@ -858,6 +858,32 @@ footer{background:#030810;border-top:1px solid var(--glass-b);padding:2.5rem 0 1
 <section id="travel-news" aria-label="Travel news" style="max-width:1200px;margin:24px auto;padding:0 20px">
 <iframe title="Travel news · 旅行资讯" src="travel-news/index.html" loading="lazy" style="display:block;width:100%;height:430px;border:0;border-radius:16px" sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox"></iframe>
 </section>
+<script>
+(function(){
+  'use strict';
+  const frame=document.querySelector('#travel-news iframe');
+  if(!frame)return;
+  const key='nice_travel_news_language';
+  const normalize=value=>{value=String(value||'').toLowerCase();return /^ja(?:-|$)/.test(value)?'ja':/^(zh|zh-cn|zh-sg|zh-hans)(?:$|-)/.test(value)&&!/^zh-(tw|hk|mo|hant)/.test(value)?'zh-hans':'en'};
+  let manual='';
+  try {manual=sessionStorage.getItem(key)||'';} catch(_){}
+  if(!['en','ja','zh-hans'].includes(manual))manual='';
+  function current(){return manual||normalize(document.documentElement.getAttribute('data-lang')||document.documentElement.lang||(navigator.languages||[])[0]||navigator.language||'en')}
+  function send(){frame.contentWindow.postMessage({type:'nice-travel-language',lang:current(),manual:!!manual},'*')}
+  const url=new URL(frame.getAttribute('src'),location.href);
+  url.searchParams.set('lang',current());
+  if(manual)url.searchParams.set('manual','1');
+  frame.src=url.href;
+  frame.addEventListener('load',send);
+  new MutationObserver(send).observe(document.documentElement,{attributes:true,attributeFilter:['lang','data-lang']});
+  addEventListener('message',event=>{
+    if(event.source!==frame.contentWindow||!event.data)return;
+    if(event.data.type==='nice-travel-ready'){send();return}
+    if(event.data.type!=='nice-travel-manual'||!['en','ja','zh-hans'].includes(event.data.lang))return;
+    manual=event.data.lang;try {sessionStorage.setItem(key,manual)}catch(_){}
+  });
+})();
+</script>
 <!-- TRAVEL-NEWS-SLOT-V1 END -->
 <footer>
   <div class="container">

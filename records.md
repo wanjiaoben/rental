@@ -92,3 +92,6 @@ HB-269 / BR-2026-039 (2026-11-20): owner-approved four-language Onna Minami Bypa
 
 
 HB-333 / BR-2026-043 (2026-11-23): added the approved multilingual travel-news card linking to the Nice Okinawa articles; existing cards retained.
+
+
+HB-374 (2026-11-25): news shelf follows page language, preserves manual choice per browsing session, falls back to English then original Chinese; article data unchanged. Preview candidate only, not published.
